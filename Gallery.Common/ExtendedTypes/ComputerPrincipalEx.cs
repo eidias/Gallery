@@ -20,15 +20,18 @@ namespace Gallery.Common.ExtendedTypes
             : base(context)
         {
         }
+
         public ComputerPrincipalEx(PrincipalContext context, string samAccountName, string password, bool enabled)
             : base(context, samAccountName, password, enabled)
         {
         }
+
         //Must implement all find methods we want to use on this principal.
         public static new ComputerPrincipalEx FindByIdentity(PrincipalContext context, string identityValue)
         {
             return (ComputerPrincipalEx)FindByIdentityWithType(context, typeof(ComputerPrincipalEx), identityValue);
         }
+
         //Method to provide a simple access from the principal to the DirectoryEntry
         public DirectoryEntry DirectoryEntry
         {
@@ -37,10 +40,12 @@ namespace Gallery.Common.ExtendedTypes
                 return GetUnderlyingObject() as DirectoryEntry;
             }
         }
+
         public ICollection GetAllProperties()
         {
             return DirectoryEntry.Properties.Values;
         }
+
         public IEnumerable<TElement> GetCustomElements<TElement>() where TElement : DirectoryElement, new()
         {
             if (DirectoryEntry == null)
@@ -52,7 +57,6 @@ namespace Gallery.Common.ExtendedTypes
                 TElement element = new TElement();
                 yield return element.GetFromDirectoryEntry(child) as TElement;
             }
-
         }
 
         [DirectoryProperty("userAccountControl")]

@@ -20,16 +20,6 @@ namespace Gallery.Common.BaseTypes
         [DirectoryProperty("whenChanged")]
         public DateTime? Modified { get; set; }
 
-        private IEnumerable<PropertyInfo> GetDirectoryProperties()
-        {
-            //We only look for properties when there is an attribute available.
-            return GetType().GetProperties().Where(x => x.GetCustomAttributes(typeof(DirectoryPropertyAttribute), false).Any());
-        }
-        private DirectoryPropertyAttribute GetDirectoryPropertyAttribute(PropertyInfo propertyInfo)
-        {
-            //The enumeration is already filtered for properties containing DirectoryPropertyAttributes.
-            return propertyInfo.GetCustomAttributes(typeof(DirectoryPropertyAttribute), false).Single() as DirectoryPropertyAttribute;
-        }
         protected void SetMappedProperties(DirectoryEntry directoryEntry)
         {
             foreach (var property in GetDirectoryProperties())
@@ -47,6 +37,18 @@ namespace Gallery.Common.BaseTypes
                 property.SetValue(this, directoryEntry.Properties[GetDirectoryPropertyAttribute(property).SchemaAttributeName].Value, null);
             }
             return this;
+        }
+
+        IEnumerable<PropertyInfo> GetDirectoryProperties()
+        {
+            //We only look for properties when there is an attribute available.
+            return GetType().GetProperties().Where(x => x.GetCustomAttributes(typeof(DirectoryPropertyAttribute), false).Any());
+        }
+
+        DirectoryPropertyAttribute GetDirectoryPropertyAttribute(PropertyInfo propertyInfo)
+        {
+            //The enumeration is already filtered for properties containing DirectoryPropertyAttributes.
+            return propertyInfo.GetCustomAttributes(typeof(DirectoryPropertyAttribute), false).Single() as DirectoryPropertyAttribute;
         }
     }
 }
