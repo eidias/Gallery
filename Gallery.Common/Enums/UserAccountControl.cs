@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Gallery.Common.Enums
+{
+    [Flags]
+    public enum UserAccountControl
+    {
+        //Taken from http://msdn.microsoft.com/en-us/library/ms680832.aspx with corrections for missing values.
+        NONE = 0x00000000,
+        ADS_UF_SCRIPT = 0x00000001,
+        ADS_UF_ACCOUNTDISABLE = 0x00000002,
+        NOTUSED1 = 0x00000004,
+        ADS_UF_HOMEDIR_REQUIRED = 0x00000008,
+        ADS_UF_LOCKOUT = 0x00000010,
+        ADS_UF_PASSWD_NOTREQD = 0x00000020,
+        ADS_UF_PASSWD_CANT_CHANGE = 0x00000040,
+        ADS_UF_ENCRYPTED_TEXT_PASSWORD_ALLOWED = 0x00000080,
+        ADS_UF_TEMP_DUPLICATE_ACCOUNT = 0x00000100,
+        ADS_UF_NORMAL_ACCOUNT = 0x00000200,
+        NOTUSED2 = 0x00000400,
+        ADS_UF_INTERDOMAIN_TRUST_ACCOUNT = 0x00000800,
+        ADS_UF_WORKSTATION_TRUST_ACCOUNT = 0x00001000,
+        ADS_UF_SERVER_TRUST_ACCOUNT = 0x00002000,
+        NOTUSED3 = 0x00004000,
+        NOTUSED4 = 0x00008000,
+        ADS_UF_DONT_EXPIRE_PASSWD = 0x00010000,
+        ADS_UF_MNS_LOGON_ACCOUNT = 0x00020000,
+        ADS_UF_SMARTCARD_REQUIRED = 0x00040000,
+        ADS_UF_TRUSTED_FOR_DELEGATION = 0x00080000,
+        ADS_UF_NOT_DELEGATED = 0x00100000,
+        ADS_UF_USE_DES_KEY_ONLY = 0x00200000,
+        ADS_UF_DONT_REQUIRE_PREAUTH = 0x00400000,
+        ADS_UF_PASSWORD_EXPIRED = 0x00800000,
+        ADS_UF_TRUSTED_TO_AUTHENTICATE_FOR_DELEGATION = 0x01000000
+    }
+}
