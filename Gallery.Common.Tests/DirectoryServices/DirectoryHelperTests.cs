@@ -1,4 +1,4 @@
-﻿using Gallery.Common.ExtendedTypes;
+﻿using Gallery.Common.DirectoryServices;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gallery.Common.Tests.Helpers
+namespace Gallery.Common.Tests.DirectoryServices
 {
     public class DirectoryHelperTests
     {

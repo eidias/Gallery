@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gallery.Common.ExtendedTypes
+namespace Gallery.Common.Net
 {
     //WebClient descends from System.ComponentModel.Component, which is defined with a [DesignerCategory("Component")] attribute.
     //Decorating our derived class prevents VS from opening it with a designer.

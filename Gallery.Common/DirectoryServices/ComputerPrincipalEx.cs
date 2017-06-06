@@ -1,6 +1,4 @@
-﻿using Gallery.Common.BaseTypes;
-using Gallery.Common.Enums;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.DirectoryServices;
@@ -9,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gallery.Common.ExtendedTypes
+namespace Gallery.Common.DirectoryServices
 {
     [DirectoryRdnPrefix("CN")]
     [DirectoryObjectClass("computer")]

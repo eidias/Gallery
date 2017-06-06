@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Gallery.Common.BaseTypes
+namespace Gallery.Common.Xml
 {
     public abstract class XmlLayout
     {

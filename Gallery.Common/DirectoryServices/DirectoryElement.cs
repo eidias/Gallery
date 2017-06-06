@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gallery.Common.BaseTypes
+namespace Gallery.Common.DirectoryServices
 {
     public abstract class DirectoryElement
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gallery.Common.Enums
+namespace Gallery.Common.DirectoryServices
 {
     [Flags]
     public enum UserAccountControl

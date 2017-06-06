@@ -42,15 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseTypes\DirectoryElement.cs" />
-    <Compile Include="BaseTypes\XmlLayout.cs" />
-    <Compile Include="Enums\UserAccountControl.cs" />
-    <Compile Include="ExtendedTypes\ComputerPrincipalEx.cs" />
-    <Compile Include="ExtendedTypes\FtpClient.cs" />
+    <Compile Include="DirectoryServices\DirectoryElement.cs" />
+    <Compile Include="Xml\XmlLayout.cs" />
+    <Compile Include="DirectoryServices\UserAccountControl.cs" />
+    <Compile Include="DirectoryServices\ComputerPrincipalEx.cs" />
+    <Compile Include="Net\FtpClient.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Extensions\IQueryableExtensions.cs" />
-    <Compile Include="Helpers\DirectoryHelper.cs" />
+    <Compile Include="DirectoryServices\DirectoryHelper.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\ExpressionHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gallery.Common.Helpers
+namespace Gallery.Common.DirectoryServices
 {
     public class DirectoryHelper<T> : IDisposable where T : new()
     {
