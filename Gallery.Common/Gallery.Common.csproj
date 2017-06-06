@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DirectoryServices\DirectoryElement.cs" />
+    <Compile Include="Settings\BaseSetting.cs" />
+    <Compile Include="Settings\SettingsHelper.cs" />
     <Compile Include="Xml\XmlLayout.cs" />
     <Compile Include="DirectoryServices\UserAccountControl.cs" />
     <Compile Include="DirectoryServices\ComputerPrincipalEx.cs" />
