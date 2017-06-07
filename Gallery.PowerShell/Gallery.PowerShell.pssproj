@@ -30,9 +30,9 @@
     <Folder Include="Database\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Network\DnsHelper.ps1" />
-    <Compile Include="Network\FtpHelper.ps1" />
-    <Compile Include="Network\SmtpHelper.ps1" />
+    <Compile Include="Network\Dns.ps1" />
+    <Compile Include="Network\Ftp.ps1" />
+    <Compile Include="Network\Smtp.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
