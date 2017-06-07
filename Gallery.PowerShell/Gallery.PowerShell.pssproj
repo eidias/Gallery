@@ -27,8 +27,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Network\" />
+    <Folder Include="Database\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Network\DnsHelper.ps1" />
     <Compile Include="Network\FtpHelper.ps1" />
     <Compile Include="Network\SmtpHelper.ps1" />
   </ItemGroup>

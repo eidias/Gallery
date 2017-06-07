@@ -1,5 +1,5 @@
 #
-# SmtpHelper.ps1
+# Smtp.ps1
 #
 
 function Send-MailMessageDirectly

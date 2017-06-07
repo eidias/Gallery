@@ -1,5 +1,5 @@
 #
-# FtpHelper.ps1
+# Ftp.ps1
 #
 
 $typeDefinition = @"
