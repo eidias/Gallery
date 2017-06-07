@@ -27,12 +27,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Network\" />
-    <Folder Include="Database\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Network\Dns.ps1" />
     <Compile Include="Network\Ftp.ps1" />
     <Compile Include="Network\Smtp.ps1" />
+    <Compile Include="SqlServer\Backup.ps1" />
+    <Compile Include="SqlServer\Management.ps1" />
+    <Compile Include="SqlServer\Query.ps1" />
+    <Compile Include="SqlServer\Restore.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
