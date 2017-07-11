@@ -19,6 +19,7 @@ public class FtpClient : WebClient
 Add-Type -TypeDefinition $typeDefinition
 $ftpClient = New-Object FtpClient
 $ftpClient.Credentials = New-Object System.Net.NetworkCredential("user", "password")
+
 Get-ChildItem "source path" -Filter *.zip | Foreach-Object {
 	$ftpClient.UploadFile("ftp://ftp.server.name/$_.Name", "STOR", $_.FullName)
 }
