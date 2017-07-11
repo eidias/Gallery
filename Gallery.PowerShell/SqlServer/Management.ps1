@@ -2,6 +2,7 @@
 # Management.ps1
 #
 # Skeleton to perform tasks on SQL Server using SMO.
+Exit
 
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.ConnectionInfo")
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Smo")

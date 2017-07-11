@@ -1,7 +1,8 @@
 #
 # Restore.ps1
 #
-# Restores a database from file to the local SQL Server
+# Restores a database from file to the local SQL Server.
+Exit
 
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.ConnectionInfo")
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Smo")

@@ -1,6 +1,7 @@
 #
 # Ftp.ps1
 #
+Exit
 
 $typeDefinition = @"
 using System;

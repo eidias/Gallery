@@ -1,6 +1,7 @@
 #
 # Dns.ps1
 #
+Exit
 
 function Query
 {

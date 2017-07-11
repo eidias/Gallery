@@ -1,6 +1,7 @@
 #
 # Smtp.ps1
 #
+Exit
 
 function Send-MailMessageDirectly
 {
