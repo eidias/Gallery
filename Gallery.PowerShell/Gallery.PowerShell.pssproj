@@ -27,12 +27,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Network\" />
+    <Folder Include="IIS\" />
+    <Folder Include="General\" />
+    <Folder Include="Security\" />
     <Folder Include="SqlServer\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="General\Files.ps1" />
+    <Compile Include="IIS\Install.ps1" />
     <Compile Include="Network\Dns.ps1" />
     <Compile Include="Network\Ftp.ps1" />
     <Compile Include="Network\Smtp.ps1" />
+    <Compile Include="Security\Signing.ps1" />
     <Compile Include="SqlServer\Backup.ps1" />
     <Compile Include="SqlServer\Install.ps1" />
     <Compile Include="SqlServer\Management.ps1" />
