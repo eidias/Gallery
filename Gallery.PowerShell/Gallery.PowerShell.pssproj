@@ -34,7 +34,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="General\Files.ps1" />
+    <Compile Include="General\Settings.ps1" />
+    <Compile Include="IIS\Bindings.ps1" />
     <Compile Include="IIS\Install.ps1" />
+    <Compile Include="IIS\Configure.ps1" />
+    <Compile Include="Network\Client.ps1" />
     <Compile Include="Network\Dns.ps1" />
     <Compile Include="Network\Ftp.ps1" />
     <Compile Include="Network\Smtp.ps1" />
