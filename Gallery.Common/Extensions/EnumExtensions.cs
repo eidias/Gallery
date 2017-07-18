@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -15,6 +16,12 @@ namespace Gallery.Common.Extensions
             string name = enumValue.ToString();
             FieldInfo fieldInfo = type.GetField(name);
             return fieldInfo.GetCustomAttribute<TAttribute>();
+        }
+
+        public static string ToLocalizedString(this Enum e)
+        {
+            TypeConverter typeConverter = TypeDescriptor.GetConverter(e);
+            return typeConverter.ConvertTo(e, typeof(string)) as string;
         }
     }
 }

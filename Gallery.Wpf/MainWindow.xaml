@@ -1,0 +1,29 @@
+﻿<Window x:Class="Gallery.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:Gallery.Wpf.ViewModels"
+        xmlns:local="clr-namespace:Gallery.Wpf"
+        mc:Ignorable="d"
+        Title="{Binding Title}" Height="675" Width="1200">
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Margin="10" LastChildFill="False">
+            <TextBlock Text="{Binding Title}"/>
+            <ComboBox ItemsSource="{Binding AvailableViews}" SelectedItem="{Binding SelectedView}" DisplayMemberPath="Name" DockPanel.Dock="Right" Width="150" />
+        </DockPanel>
+        <ContentControl Grid.Row="1" Content="{Binding EmbeddedView}"/>
+        <DockPanel Grid.Row="2" Margin="10" LastChildFill="False">
+            <TextBlock Text="{Binding Version}"/>
+            <TextBlock Text="{Binding User}" DockPanel.Dock="Right"/>
+        </DockPanel>
+    </Grid>
+</Window>

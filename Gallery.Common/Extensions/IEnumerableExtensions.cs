@@ -17,5 +17,12 @@ namespace Gallery.Common.Extensions
             }
             return sortedList;
         }
+
+        public static IEnumerable<int> FindGaps(this IEnumerable<int> collection)
+        {
+            //Test with new[] { 1, 2, 3, 6, 7, 17, 23, 44, 56, 57, 58 }
+            return Enumerable.Range(1, collection.Max() + 1).Except(collection);
+        }
+
     }
 }
