@@ -1,6 +1,7 @@
 #
 # Smtp.ps1
 #
+# Send SMTP messages
 Exit
 
 # Send mail message directly
@@ -11,6 +12,7 @@ $subject = "Test"
 $body = "This is a test message"
 $mxRecords = Resolve-DnsName -Name $to.Split("@")[1] -Type MX
 Send-MailMessage -SmtpServer $mxrecords[0].NameExchange -From $from -To $to -Subject $subject -Body $body -BodyAsHtml -Encoding UTF8
+
 
 # Send mail message through relay
 $from = "A Sender<server@server.name>"

@@ -29,24 +29,37 @@
     <Folder Include="Network\" />
     <Folder Include="IIS\" />
     <Folder Include="General\" />
-    <Folder Include="Security\" />
+    <Folder Include="Files\" />
+    <Folder Include="Parsing\" />
+    <Folder Include="Office 365\" />
+    <Folder Include="Windows\" />
+    <Folder Include="Azure\" />
     <Folder Include="SqlServer\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="General\Files.ps1" />
+    <Compile Include="Files\ComputeFileHash.ps1" />
+    <Compile Include="Files\Files.ps1" />
     <Compile Include="General\Settings.ps1" />
+    <Compile Include="General\Template.ps1" />
     <Compile Include="IIS\Bindings.ps1" />
     <Compile Include="IIS\Install.ps1" />
     <Compile Include="IIS\Configure.ps1" />
+    <Compile Include="Files\Logging.ps1" />
     <Compile Include="Network\Client.ps1" />
-    <Compile Include="Network\Dns.ps1" />
     <Compile Include="Network\Ftp.ps1" />
     <Compile Include="Network\Smtp.ps1" />
-    <Compile Include="Security\Signing.ps1" />
+    <Compile Include="Parsing\FixedWidthText.ps1" />
+    <Compile Include="Parsing\XmlFiles.ps1" />
+    <Compile Include="Office 365\Exchange.ps1" />
+    <Compile Include="SqlServer\Query.ps1" />
+    <Compile Include="SqlServer\Verify.ps1" />
+    <Compile Include="Files\Folders.ps1" />
+    <Compile Include="Windows\Scheduling.ps1" />
+    <Compile Include="Windows\Signing.ps1" />
+    <Compile Include="Windows\Users.ps1" />
     <Compile Include="SqlServer\Backup.ps1" />
     <Compile Include="SqlServer\Install.ps1" />
-    <Compile Include="SqlServer\Management.ps1" />
-    <Compile Include="SqlServer\Query.ps1" />
+    <Compile Include="SqlServer\Smo.ps1" />
     <Compile Include="SqlServer\Restore.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

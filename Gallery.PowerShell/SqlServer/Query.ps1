@@ -1,32 +1,46 @@
 #
 # Query.ps1
 #
-# Executes a query against the local server SQL Server instance.
+# Execute a query against a database without a dependencies to SQL Server Management Objects (SMO)
 Exit
 
-[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.ConnectionInfo")
-[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Smo")
-[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.SmoExtended")
+function Execute-Command
+{
+    [CmdletBinding()]
+    Param(
+        [Parameter(ValueFromPipeline=$true)]
+        [string]$commandText
+    )
+    Process
+    {
+        $connectionStringBuilder = New-Object -TypeName System.Data.SqlClient.SqlConnectionStringBuilder
+        $connectionStringBuilder.psbase.ApplicationName = "Windows PowerShell ISE"
+        $connectionStringBuilder.psbase.DataSource = "(local)"
+        $connectionStringBuilder.psbase.InitialCatalog = "master"
+        $connectionStringBuilder.psbase.IntegratedSecurity = $true
 
-$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection $env:COMPUTERNAME
-$serverConnection.StatementTimeout = 0
-$server = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Server $serverConnection
+        $sqlConnection = New-Object -TypeName System.Data.SqlClient.SqlConnection
+        $sqlConnection.ConnectionString = $connectionStringBuilder.ConnectionString
+        $sqlConnection.Open()
 
-# Execute with results
-$database = $server.Databases["master"]
-$table = $database.ExecuteWithResults("SELECT * FROM sys.server_principals").Tables[0] | Out-GridView
+        $sqlCmd = New-Object -TypeName System.Data.SqlClient.SqlCommand
+        $sqlCmd.Connection = $sqlConnection
+        $sqlCmd.CommandText = $commandText
 
-# Execute non-query
-$query = @"
+        $sqlReader = $sqlCmd.ExecuteReader()
+        if ($sqlReader.HasRows)
+        {
+            $dataTable = New-Object -TypeName System.Data.DataTable
+            $dataTable.Load($sqlReader);
+            return $dataTable
+        }
+        $sqlReader.Close();
+        $sqlConnection.Close()
+    }
+}
 
-IF NOT EXISTS(SELECT principal_id FROM sys.server_principals WHERE name = N'IIS APPPOOL\myapppool')
-BEGIN
-    CREATE LOGIN [IIS APPPOOL\myapppool] FROM WINDOWS
-END
-GO
+@"
+            
+SELECT * FROM sys.server_principals
 
-EXEC sp_changedbowner [IIS APPPOOL\myapppool]
-GO
-
-"@
-$server.ConnectionContext.ExecuteNonQuery($query)
+"@ | Execute-Command | Out-GridView

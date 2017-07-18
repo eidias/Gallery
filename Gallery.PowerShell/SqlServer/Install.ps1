@@ -7,6 +7,7 @@ Exit
 $location = "$env:USERPROFILE\Downloads"
 Set-Location $location
 
+
 #SQL Server 2016
 @"
 [OPTIONS]

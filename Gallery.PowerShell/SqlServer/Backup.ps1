@@ -1,8 +1,7 @@
 #
 # Backup.ps1
 #
-# Backup all non-system databases.
-# Backup will be created in the default backup directory using the database name as filename.
+# Backup all non-system databases to the default backup directory using the database name as filename.
 Exit
 
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Smo")

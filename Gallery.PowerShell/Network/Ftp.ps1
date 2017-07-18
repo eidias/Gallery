@@ -1,6 +1,7 @@
 #
 # Ftp.ps1
 #
+# Upload files using FTP over TLS
 Exit
 
 $typeDefinition = @"
