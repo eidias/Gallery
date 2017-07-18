@@ -2,6 +2,7 @@
 # Backup.ps1
 #
 # Backup all non-system databases to the default backup directory using the database name as filename.
+# TODO: Create a function and allow using -Force to also backup system databases
 Exit
 
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Smo")
@@ -16,7 +17,7 @@ $server = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Server $server
 $dayofweek = (Get-Date).DayOfWeek.value__
 
 foreach ($database in $server.Databases)
-{            
+{   
     if($database.IsSystemObject -eq $false)           
     {            
         $backup = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Backup       
