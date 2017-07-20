@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Gallery.Common.Attributes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
@@ -19,6 +21,8 @@ namespace Gallery.Common.Recources
         }
 
         public string[] ManifestResourceNames => assembly.GetManifestResourceNames();
+
+        public string InvalidOperationExceptionMessage { get; private set; }
 
         public Stream this[string manifestResourceName]
         {
@@ -53,6 +57,35 @@ namespace Gallery.Common.Recources
             Stream stream = this[manifestResourceName] as Stream;
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
             return xmlSerializer.Deserialize(stream) as T;
+        }
+
+        public string GetResourceString([CallerMemberName] string name = null)
+        {
+            Func<Stream> getStream = () =>
+            {
+                return assembly.GetManifestResourceStream(name);
+            };
+
+            //If the parameter name contains a method name of the calling type, we look for an EmbeddedResourceAttribute
+            MethodInfo methodInfo = GetType().GetMethod(name);
+            if (methodInfo != null)
+            {
+                EmbeddedResourceAttribute embeddedResourceAttribute = methodInfo.GetCustomAttribute<EmbeddedResourceAttribute>();
+                if (embeddedResourceAttribute == null)
+                {
+                    throw new InvalidOperationException(InvalidOperationExceptionMessage);
+                }
+                getStream = () =>
+                {
+                    //The calling member must directly implement the attribute
+                    return assembly.GetManifestResourceStream(assembly.GetName().Name + embeddedResourceAttribute.Name);
+                };
+            }
+            //StreamReader disposes the underlying stream when getting disposed
+            using (StreamReader streamReader = new StreamReader(getStream()))
+            {
+                return streamReader.ReadToEnd();
+            }
         }
     }
 }

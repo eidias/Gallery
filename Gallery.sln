@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Service", "Gallery.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Wpf", "Gallery.Wpf\Gallery.Wpf.csproj", "{CBC13B4C-61F6-459B-A639-0D8963044CB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Web", "Gallery.Web\Gallery.Web.csproj", "{E49D18A0-D249-4E47-9E67-E50B6433F312}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CBC13B4C-61F6-459B-A639-0D8963044CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBC13B4C-61F6-459B-A639-0D8963044CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBC13B4C-61F6-459B-A639-0D8963044CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E49D18A0-D249-4E47-9E67-E50B6433F312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E49D18A0-D249-4E47-9E67-E50B6433F312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E49D18A0-D249-4E47-9E67-E50B6433F312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E49D18A0-D249-4E47-9E67-E50B6433F312}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
