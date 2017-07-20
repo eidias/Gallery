@@ -33,7 +33,6 @@
     <Folder Include="Parsing\" />
     <Folder Include="Office 365\" />
     <Folder Include="Windows\" />
-    <Folder Include="Azure\" />
     <Folder Include="SqlServer\" />
   </ItemGroup>
   <ItemGroup>
