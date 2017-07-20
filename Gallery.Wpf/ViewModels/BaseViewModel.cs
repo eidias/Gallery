@@ -5,11 +5,16 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Gallery.Wpf.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged, IDataErrorInfo
+    delegate void MessageDispatched(object message);
+
+    public abstract class BaseViewModel : INotifyPropertyChanged, IDataErrorInfo
     {
+        internal static MessageDispatched MessageDispatched;
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
@@ -25,6 +30,20 @@ namespace Gallery.Wpf.ViewModels
         public string this[string columnName]
         {
             get { throw new NotImplementedException(); }
+        }
+
+        internal virtual CancelEventHandler Closing { get; set; }
+
+        protected void Show(Window window)
+        {
+            window.Owner = Application.Current.MainWindow;
+            window.Show();
+        }
+
+        protected void ShowDialog(Window window)
+        {
+            window.Owner = Application.Current.MainWindow;
+            window.ShowDialog();
         }
     }
 }

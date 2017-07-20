@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Gallery.Common.Security
 {
-    public class CryptographyHelper
+    public class ProtectedDataHelper
     {
         public static string ProtectString(string text, byte[] entropy = null)
         {

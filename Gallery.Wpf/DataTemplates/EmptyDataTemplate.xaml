@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+    <ObjectDataProvider x:Key="PlatformSource" MethodName="GetValues" ObjectType="{x:Type System:Enum}">
+        <ObjectDataProvider.MethodParameters>
+            <x:Type TypeName="System:Enum" />
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+
+</ResourceDictionary>

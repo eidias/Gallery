@@ -55,9 +55,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Helpers\CustomDataTemplateSelector.cs" />
+    <Compile Include="Helpers\DispatcherTraceListener.cs" />
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Page Include="DataTemplates\EmptyDataTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
