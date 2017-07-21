@@ -73,13 +73,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="EmbeddedResources\Archive.zip" />
+    <EmbeddedResource Include="EmbeddedResources\Archive.zip" />
     <None Include="packages.config" />
     <None Include="xunit.runner.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EmbeddedResources\Lighthouse.jpg" />
-    <Content Include="EmbeddedResources\SqlQuery.sql" />
+    <EmbeddedResource Include="EmbeddedResources\Lighthouse.jpg" />
+    <EmbeddedResource Include="EmbeddedResources\SqlQuery.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
