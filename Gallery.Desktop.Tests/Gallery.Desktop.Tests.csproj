@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{89081D69-5837-4633-A464-54B7FC71F0B2}</ProjectGuid>
+    <ProjectGuid>{C3353248-A653-4AA0-A6D2-5DCF3955AC93}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Gallery.Library.Tests</RootNamespace>
-    <AssemblyName>Gallery.Library.Tests</AssemblyName>
+    <RootNamespace>Gallery.Desktop.Tests</RootNamespace>
+    <AssemblyName>Gallery.Desktop.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -68,7 +68,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helpers\MoqHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -78,9 +77,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Gallery.Library\Gallery.Library.csproj">
-      <Project>{6c74f21a-74d8-4fc7-8aeb-f822c71934d9}</Project>
-      <Name>Gallery.Library</Name>
+    <ProjectReference Include="..\Gallery.Desktop\Gallery.Desktop.csproj">
+      <Project>{9e14dc83-3ecd-4cb6-b368-578e9b604851}</Project>
+      <Name>Gallery.Desktop</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

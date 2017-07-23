@@ -7,15 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Common", "Gallery.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Service", "Gallery.Service\Gallery.Service.csproj", "{68A690BD-1BB1-4E5F-A856-18A383CB11DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Wpf", "Gallery.Wpf\Gallery.Wpf.csproj", "{CBC13B4C-61F6-459B-A639-0D8963044CB1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Web", "Gallery.Web\Gallery.Web.csproj", "{E49D18A0-D249-4E47-9E67-E50B6433F312}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Web.Tests", "Gallery.Web.Tests\Gallery.Web.Tests.csproj", "{D8A19DDF-B2C3-425C-9488-6AE0D177BBEC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Library", "Gallery.Library\Gallery.Library.csproj", "{6C74F21A-74D8-4FC7-8AEB-F822C71934D9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PowerShell", "PowerShell", "{E8594100-3266-406B-89FC-E4286FFA7B24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Library.Tests", "Gallery.Library.Tests\Gallery.Library.Tests.csproj", "{89081D69-5837-4633-A464-54B7FC71F0B2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{F12866C6-C241-41C7-890A-460C7C5D8ACB}"
 	ProjectSection(SolutionItems) = preProject
@@ -24,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{F128
 		Samples\SqlQuery.sql = Samples\SqlQuery.sql
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Library.Tests", "Gallery.Library.Tests\Gallery.Library.Tests.csproj", "{89081D69-5837-4633-A464-54B7FC71F0B2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PowerShell", "PowerShell", "{E8594100-3266-406B-89FC-E4286FFA7B24}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{4F5A5B55-18CB-452B-9ED9-4F604CB3371D}"
 	ProjectSection(SolutionItems) = preProject
@@ -36,51 +34,55 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{4F5A5B55
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "General", "General", "{16FDDE10-5B5E-41A3-81BA-69620A2735FD}"
 	ProjectSection(SolutionItems) = preProject
-		Gallery.PowerShell\General\Settings.ps1 = Gallery.PowerShell\General\Settings.ps1
-		Gallery.PowerShell\General\Template.ps1 = Gallery.PowerShell\General\Template.ps1
+		PowerShell\General\Settings.ps1 = PowerShell\General\Settings.ps1
+		PowerShell\General\Template.ps1 = PowerShell\General\Template.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IIS", "IIS", "{E1ABF7DC-2533-425F-88B5-3D1537B444B4}"
 	ProjectSection(SolutionItems) = preProject
-		Gallery.PowerShell\IIS\Bindings.ps1 = Gallery.PowerShell\IIS\Bindings.ps1
-		Gallery.PowerShell\IIS\Configure.ps1 = Gallery.PowerShell\IIS\Configure.ps1
-		Gallery.PowerShell\IIS\Install.ps1 = Gallery.PowerShell\IIS\Install.ps1
+		PowerShell\IIS\Bindings.ps1 = PowerShell\IIS\Bindings.ps1
+		PowerShell\IIS\Configure.ps1 = PowerShell\IIS\Configure.ps1
+		PowerShell\IIS\Install.ps1 = PowerShell\IIS\Install.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Network", "Network", "{E870A8AB-4FF6-4AD8-8B9F-EC0160C1324C}"
 	ProjectSection(SolutionItems) = preProject
-		Gallery.PowerShell\Network\Client.ps1 = Gallery.PowerShell\Network\Client.ps1
-		Gallery.PowerShell\Network\Ftp.ps1 = Gallery.PowerShell\Network\Ftp.ps1
-		Gallery.PowerShell\Network\Smtp.ps1 = Gallery.PowerShell\Network\Smtp.ps1
+		PowerShell\Network\Client.ps1 = PowerShell\Network\Client.ps1
+		PowerShell\Network\Ftp.ps1 = PowerShell\Network\Ftp.ps1
+		PowerShell\Network\Smtp.ps1 = PowerShell\Network\Smtp.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Office 365", "Office 365", "{88F79CAB-D9E6-42D0-ACB7-CC3DF5F33C80}"
 	ProjectSection(SolutionItems) = preProject
-		Gallery.PowerShell\Office 365\Exchange.ps1 = Gallery.PowerShell\Office 365\Exchange.ps1
+		PowerShell\Office 365\Exchange.ps1 = PowerShell\Office 365\Exchange.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Parsing", "Parsing", "{357E7E7F-3630-472E-87C6-0E568DBECA02}"
 	ProjectSection(SolutionItems) = preProject
-		Gallery.PowerShell\Parsing\FixedWidthText.ps1 = Gallery.PowerShell\Parsing\FixedWidthText.ps1
-		Gallery.PowerShell\Parsing\XmlFiles.ps1 = Gallery.PowerShell\Parsing\XmlFiles.ps1
+		PowerShell\Parsing\FixedWidthText.ps1 = PowerShell\Parsing\FixedWidthText.ps1
+		PowerShell\Parsing\XmlFiles.ps1 = PowerShell\Parsing\XmlFiles.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlServer", "SqlServer", "{5BF10181-8140-450D-BD41-1D6E2134CAB0}"
 	ProjectSection(SolutionItems) = preProject
-		Gallery.PowerShell\SqlServer\Backup.ps1 = Gallery.PowerShell\SqlServer\Backup.ps1
-		Gallery.PowerShell\SqlServer\Install.ps1 = Gallery.PowerShell\SqlServer\Install.ps1
-		Gallery.PowerShell\SqlServer\Query.ps1 = Gallery.PowerShell\SqlServer\Query.ps1
-		Gallery.PowerShell\SqlServer\Restore.ps1 = Gallery.PowerShell\SqlServer\Restore.ps1
-		Gallery.PowerShell\SqlServer\Smo.ps1 = Gallery.PowerShell\SqlServer\Smo.ps1
-		Gallery.PowerShell\SqlServer\Verify.ps1 = Gallery.PowerShell\SqlServer\Verify.ps1
+		PowerShell\SqlServer\Backup.ps1 = PowerShell\SqlServer\Backup.ps1
+		PowerShell\SqlServer\Install.ps1 = PowerShell\SqlServer\Install.ps1
+		PowerShell\SqlServer\Query.ps1 = PowerShell\SqlServer\Query.ps1
+		PowerShell\SqlServer\Restore.ps1 = PowerShell\SqlServer\Restore.ps1
+		PowerShell\SqlServer\Smo.ps1 = PowerShell\SqlServer\Smo.ps1
+		PowerShell\SqlServer\Verify.ps1 = PowerShell\SqlServer\Verify.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows", "Windows", "{8E689A64-D0DA-44A9-AF2F-82232155E39E}"
 	ProjectSection(SolutionItems) = preProject
-		Gallery.PowerShell\Windows\Scheduling.ps1 = Gallery.PowerShell\Windows\Scheduling.ps1
-		Gallery.PowerShell\Windows\Signing.ps1 = Gallery.PowerShell\Windows\Signing.ps1
-		Gallery.PowerShell\Windows\Users.ps1 = Gallery.PowerShell\Windows\Users.ps1
+		PowerShell\Windows\Scheduling.ps1 = PowerShell\Windows\Scheduling.ps1
+		PowerShell\Windows\Signing.ps1 = PowerShell\Windows\Signing.ps1
+		PowerShell\Windows\Users.ps1 = PowerShell\Windows\Users.ps1
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Desktop", "Gallery.Desktop\Gallery.Desktop.csproj", "{9E14DC83-3ECD-4CB6-B368-578E9B604851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Desktop.Tests", "Gallery.Desktop.Tests\Gallery.Desktop.Tests.csproj", "{C3353248-A653-4AA0-A6D2-5DCF3955AC93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,10 +98,6 @@ Global
 		{68A690BD-1BB1-4E5F-A856-18A383CB11DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68A690BD-1BB1-4E5F-A856-18A383CB11DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68A690BD-1BB1-4E5F-A856-18A383CB11DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CBC13B4C-61F6-459B-A639-0D8963044CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBC13B4C-61F6-459B-A639-0D8963044CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBC13B4C-61F6-459B-A639-0D8963044CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBC13B4C-61F6-459B-A639-0D8963044CB1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E49D18A0-D249-4E47-9E67-E50B6433F312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E49D18A0-D249-4E47-9E67-E50B6433F312}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E49D18A0-D249-4E47-9E67-E50B6433F312}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -116,6 +114,14 @@ Global
 		{89081D69-5837-4633-A464-54B7FC71F0B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89081D69-5837-4633-A464-54B7FC71F0B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89081D69-5837-4633-A464-54B7FC71F0B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E14DC83-3ECD-4CB6-B368-578E9B604851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E14DC83-3ECD-4CB6-B368-578E9B604851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E14DC83-3ECD-4CB6-B368-578E9B604851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E14DC83-3ECD-4CB6-B368-578E9B604851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3353248-A653-4AA0-A6D2-5DCF3955AC93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3353248-A653-4AA0-A6D2-5DCF3955AC93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3353248-A653-4AA0-A6D2-5DCF3955AC93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3353248-A653-4AA0-A6D2-5DCF3955AC93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

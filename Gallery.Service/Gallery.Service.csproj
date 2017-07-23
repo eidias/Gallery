@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,15 +48,14 @@
     <Compile Include="Helpers\NativeMethods.cs" />
     <Compile Include="Helpers\ServiceManager.cs" />
     <Compile Include="Helpers\StandardService.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Helpers\TimedService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Gallery.Service.nuspec" />
-    <None Include="Content\Program.cs.pp" />
-    <None Include="Content\ProjectInstaller.cs.pp" />
-    <None Include="Content\Service.cs.pp" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectInstaller.cs" />
+    <Compile Include="Service.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
