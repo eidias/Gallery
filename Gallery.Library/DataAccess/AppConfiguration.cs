@@ -20,7 +20,10 @@ namespace Gallery.Library.DataAccess
             SetDefaultConnectionFactory(sqlConnectionFactory);
 
             //Corresponds to the providers section in the web.config file
-            SetProviderServices("System.Data.SqlClient", SqlProviderServices.Instance);
+            SetProviderServices(SqlProviderServices.ProviderInvariantName, SqlProviderServices.Instance);
+
+            //Enables automatic detection and recovery when transient connection failures affect the acknowledgement of transaction commits. 
+            SetTransactionHandler(SqlProviderServices.ProviderInvariantName, () => new CommitFailureHandler());
 
             AppInitializer appInitializer = new AppInitializer();
             SetDatabaseInitializer(appInitializer);

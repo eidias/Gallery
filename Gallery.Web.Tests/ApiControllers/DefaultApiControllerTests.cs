@@ -1,5 +1,5 @@
-﻿using Gallery.Library.Domain;
-using Gallery.Web.ApiControllers;
+﻿using Gallery.Web.ApiControllers;
+using Gallery.Web.Helpers;
 using Gallery.Web.Tests.Fixtures;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using Xunit;
 
 namespace Gallery.Web.Tests.ApiControllers
 {
-    class DefaultApiControllerTests : IClassFixture<WebApiFixture>
+    public class DefaultApiControllerTests : IClassFixture<WebApiFixture>
     {
         WebApiFixture webApiFixture;
 
@@ -37,6 +37,7 @@ namespace Gallery.Web.Tests.ApiControllers
         {
             HttpResponseMessage httpResponseMessage = await webApiFixture.SendAsync(HttpMethod.Post, $"api/status/get/{id}");
             List<int> numbers = await httpResponseMessage.Content.ReadAsAsync<List<int>>();
+            Assert.Equal(MediaType.ApplicationJson, httpResponseMessage.Content?.Headers.ContentType.MediaType);
             Assert.True(numbers.Contains(id));
         }
     }
