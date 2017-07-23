@@ -37,6 +37,7 @@
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.DirectoryServices.AccountManagement" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +63,11 @@
     <Compile Include="System\EnvironmentSettingsProvider.cs" />
     <Compile Include="Settings\SettingsHelper.cs" />
     <Compile Include="System\ErrorCode.cs" />
+    <Compile Include="System\HierarchyNode.cs" />
+    <Compile Include="Web\CachedTrace.cs" />
+    <Compile Include="Web\CachedTraceListener.cs" />
+    <Compile Include="Web\ErrorModule.cs" />
+    <Compile Include="Web\ObjectContextModule.cs" />
     <Compile Include="Xml\XmlLayout.cs" />
     <Compile Include="DirectoryServices\UserAccountControl.cs" />
     <Compile Include="DirectoryServices\ComputerPrincipalEx.cs" />

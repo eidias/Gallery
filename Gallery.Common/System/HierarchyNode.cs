@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Gallery.Web.Models
+namespace Gallery.Common.System
 {
     // Stefan Cruysberghs, July 2008, http://www.scip.be
     /// <summary>

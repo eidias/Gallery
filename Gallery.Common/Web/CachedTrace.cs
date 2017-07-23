@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web;
 
-namespace Gallery.Web.Models
+namespace Gallery.Common.Web
 {
     public class CachedTrace
     {

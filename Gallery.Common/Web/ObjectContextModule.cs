@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Gallery.Web.HttpModules
+namespace Gallery.Common.Web
 {
     public class ObjectContextModule : IHttpModule
     {

@@ -1,12 +1,11 @@
-﻿using Gallery.Web.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Caching;
 
-namespace Gallery.Web.Helpers
+namespace Gallery.Common.Web
 {
     public class CachedTraceListener : TraceListener
     {
