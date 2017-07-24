@@ -76,11 +76,5 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Gallery.Library\Gallery.Library.csproj">
-      <Project>{6c74f21a-74d8-4fc7-8aeb-f822c71934d9}</Project>
-      <Name>Gallery.Library</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

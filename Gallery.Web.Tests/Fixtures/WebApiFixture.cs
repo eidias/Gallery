@@ -17,8 +17,8 @@ namespace Gallery.Web.Tests.Fixtures
         public WebApiFixture()
         {
             HttpConfiguration httpConfiguration = new HttpConfiguration();
-            //Ensures configuration is consitent with API project and is loaded for IAssembliesResolver to find all the controllers which implement the IHttpController interface.
-            WebApiConfig.Register(httpConfiguration);
+            //Uncomment and call the same method as in Global.asax. Required for IAssembliesResolver to find all controllers which implement the IHttpController interface.
+            //WebApiConfig.Register(httpConfiguration);
             httpServer = new HttpServer(httpConfiguration);
         }
 
