@@ -9,6 +9,7 @@ using System.Web.SessionState;
 
 namespace Gallery.Web
 {
+    //Minimal packages required: Microsoft.AspNet.WebApi.WebHost, Microsoft.AspNet.Mvc, Microsoft.Owin
     public class Global : System.Web.HttpApplication
     {
         protected void Application_Start(object sender, EventArgs e)
