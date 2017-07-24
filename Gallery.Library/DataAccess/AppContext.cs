@@ -28,6 +28,7 @@ namespace Gallery.Library.DataAccess
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            //Enable "Redirect all Output Window text to Immediate Window.
             Database.Log = x => Debug.Write(x);
 
             modelBuilder.Properties<string>().Configure(s => s.HasMaxLength(8000).HasColumnType("varchar"));
