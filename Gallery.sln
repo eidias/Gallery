@@ -15,13 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Library", "Gallery.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Library.Tests", "Gallery.Library.Tests\Gallery.Library.Tests.csproj", "{89081D69-5837-4633-A464-54B7FC71F0B2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{F12866C6-C241-41C7-890A-460C7C5D8ACB}"
-	ProjectSection(SolutionItems) = preProject
-		Samples\Archive.zip = Samples\Archive.zip
-		Samples\Lighthouse.jpg = Samples\Lighthouse.jpg
-		Samples\SqlQuery.sql = Samples\SqlQuery.sql
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PowerShell", "PowerShell", "{E8594100-3266-406B-89FC-E4286FFA7B24}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{4F5A5B55-18CB-452B-9ED9-4F604CB3371D}"
@@ -83,6 +76,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Desktop", "Gallery.Desktop\Gallery.Desktop.csproj", "{9E14DC83-3ECD-4CB6-B368-578E9B604851}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Desktop.Tests", "Gallery.Desktop.Tests\Gallery.Desktop.Tests.csproj", "{C3353248-A653-4AA0-A6D2-5DCF3955AC93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{B6A17473-A9EF-42A3-ACD3-96B64E73991B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

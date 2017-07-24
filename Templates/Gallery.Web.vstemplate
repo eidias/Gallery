@@ -1,0 +1,17 @@
+<!--\AppData\Roaming\Microsoft\VisualStudio\15.0_189692e7\ProjectTemplatesCache-->
+<VSTemplate Version="2.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>Minimal ASP.NET Web Application</Name>
+        <Description>Minimal ASP.NET Web Application with library and test projects.</Description>
+        <Icon></Icon>
+        <ProjectType>CSharp</ProjectType>
+    </TemplateData>
+    <TemplateContent>
+        <ProjectCollection>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Library">Gallery.Library\MyTemplate.vstemplate</ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Library.Tests">Gallery.Library.Tests\MyTemplate.vstemplate</ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Web">Gallery.Web\MyTemplate.vstemplate</ProjectTemplateLink>
+            <ProjectTemplateLink ProjectName="$safeprojectname$.Web.Tests">Gallery.Web.Tests\MyTemplate.vstemplate</ProjectTemplateLink>
+        </ProjectCollection>
+    </TemplateContent>
+</VSTemplate>
