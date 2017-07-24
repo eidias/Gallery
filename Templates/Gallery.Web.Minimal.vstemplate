@@ -2,7 +2,7 @@
 <VSTemplate Version="2.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     <TemplateData>
         <Name>Minimal ASP.NET Web Application</Name>
-        <Description>Minimal ASP.NET Web Application with library and test projects.</Description>
+        <Description>Minimal ASP.NET Web Application suitable for MVC, API and OWIN operations including library and test projects.</Description>
         <Icon></Icon>
         <ProjectType>CSharp</ProjectType>
     </TemplateData>
