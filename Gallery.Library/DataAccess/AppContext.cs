@@ -33,6 +33,5 @@ namespace Gallery.Library.DataAccess
 
             modelBuilder.Properties<string>().Configure(s => s.HasMaxLength(8000).HasColumnType("varchar"));
         }
-
     }
 }
