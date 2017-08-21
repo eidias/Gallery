@@ -1,3 +1,4 @@
+# Templates
 ## Visual Studio Templates
 ### How to create Multi-Project Templates in Visual Studio
 
