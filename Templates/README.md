@@ -1,5 +1,5 @@
-# Visual Studio Templates
-## How to create Multi-Project Templates in Visual Studio
+## Visual Studio Templates
+### How to create Multi-Project Templates in Visual Studio
 
 Based on https://docs.microsoft.com/en-us/visualstudio/ide/how-to-create-multi-project-templates
 
