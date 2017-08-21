@@ -43,6 +43,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Network", "Network", "{E870
 		PowerShell\Network\Client.ps1 = PowerShell\Network\Client.ps1
 		PowerShell\Network\Ftp.ps1 = PowerShell\Network\Ftp.ps1
 		PowerShell\Network\Smtp.ps1 = PowerShell\Network\Smtp.ps1
+		PowerShell\Network\Soap.ps1 = PowerShell\Network\Soap.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Office 365", "Office 365", "{88F79CAB-D9E6-42D0-ACB7-CC3DF5F33C80}"
