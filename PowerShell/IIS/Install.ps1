@@ -14,4 +14,7 @@ Install-WindowsFeature NET-Framework-45-ASPNET,
                        Web-Mgmt-Console
 
 
-# ASP.NET Core installation
+# ASP.NET Core Server Hosting Bundle
+Start-BitsTransfer https://download.microsoft.com/download/B/1/D/B1D7D5BF-3920-47AA-94BD-7A6E48822F18/DotNetCore.2.0.0-WindowsHosting.exe
+Start-Process .\DotNetCore.2.0.0-WindowsHosting.exe -ArgumentList "" -Wait
+

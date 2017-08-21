@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Common", "Gallery.Common\Gallery.Common.csproj", "{8E4E9303-C6E3-4F46-8075-92C02B5C8ECF}"
 EndProject
@@ -47,6 +47,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Network", "Network", "{E870
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Office 365", "Office 365", "{88F79CAB-D9E6-42D0-ACB7-CC3DF5F33C80}"
 	ProjectSection(SolutionItems) = preProject
+		PowerShell\Office 365\Directory.ps1 = PowerShell\Office 365\Directory.ps1
 		PowerShell\Office 365\Exchange.ps1 = PowerShell\Office 365\Exchange.ps1
 	EndProjectSection
 EndProject
@@ -130,5 +131,8 @@ Global
 		{357E7E7F-3630-472E-87C6-0E568DBECA02} = {E8594100-3266-406B-89FC-E4286FFA7B24}
 		{5BF10181-8140-450D-BD41-1D6E2134CAB0} = {E8594100-3266-406B-89FC-E4286FFA7B24}
 		{8E689A64-D0DA-44A9-AF2F-82232155E39E} = {E8594100-3266-406B-89FC-E4286FFA7B24}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07690D5D-0A45-4F64-BD7B-80B0893D8C05}
 	EndGlobalSection
 EndGlobal
