@@ -1,7 +1,7 @@
 #
 # Bindings.ps1
 #
-# Handle SSL bindings for self hosted web applications
+# Handle SSL bindings for self hosted web applications -> https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate
 Exit
 
 #To bind an SSL certificate to a port number

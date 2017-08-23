@@ -13,6 +13,10 @@ Get-NetIPInterface -AddressFamily IPv4 | Sort-Object Interfacemetric
 Set-NetIPInterface -InterfaceIndex -1 -InterfaceMetric 20
 
 
+# List all currently connected networks incl. VPN
+Get-NetConnectionProfile
+
+
 # Create and maintain VPN connections
 Add-VpnConnection -Name our-office-net -ServerAddress 127.0.0.1 -SplitTunneling -RememberCredential
 Add-VpnConnectionTriggerApplication -Name our-office-net –ApplicationID C:\Windows\System32\notepad.exe
