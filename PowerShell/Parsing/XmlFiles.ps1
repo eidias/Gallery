@@ -14,7 +14,7 @@ Get-ChildItem -Path C:\Source -File -Include packages.config -Recurse | Select-X
         $package.Id = $node.id
         $package.Version = $node.version
         $package.TargetFramework = $node.targetFramework
-        $packages += New-Object –TypeName PSObject –Prop $package
+        $packages += New-Object -TypeName PSObject -Prop $package
     }
 }
 $packages | Out-GridView
