@@ -29,3 +29,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName IIS-ISAPIFilter
 
 # Show all available IIS features incl. their current state
 Get-WindowsOptionalFeature -Online | Where-Object {$_.FeatureName -like "IIS-*"}
+
+
+# Install URL Rewrite Module 2.1 
+Start-BitsTransfer https://download.microsoft.com/download/D/D/E/DDE57C26-C62C-4C59-A1BB-31D58B36ADA2/rewrite_amd64_en-US.msi
+Start-Process msiexec -ArgumentList "/i $location\rewrite_amd64_en-US.msi /qb" -Wait
+
