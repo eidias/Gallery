@@ -7,13 +7,13 @@ Exit
 function Create-FolderWithPermissions
 {
     [CmdletBinding()]
-    Param(
+    param(
         [Parameter()]
         $path,
 		[Parameter()]
         $username
     )
-    Process
+    process
     {
 		New-Item -Type Directory -Path $path
 		$acl = Get-Acl $path

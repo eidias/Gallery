@@ -16,13 +16,14 @@ $type = @{ Prop1 = ""; Prop2 = ""}
 function FunctionWithBinding
 {
     [CmdletBinding()]
-    Param(
+    param(
         [Parameter(ValueFromPipeline=$true)]
         $parameter1,
 		[Parameter()]
         $parameter2
     )
-    Process
+    # Keywords should be written in lowercase
+    process
     {
 	}
 }

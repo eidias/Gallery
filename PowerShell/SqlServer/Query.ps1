@@ -7,11 +7,11 @@ Exit
 function Execute-Command
 {
     [CmdletBinding()]
-    Param(
+    param(
         [Parameter(ValueFromPipeline=$true)]
         [string]$commandText
     )
-    Process
+    process
     {
         $connectionStringBuilder = New-Object -TypeName System.Data.SqlClient.SqlConnectionStringBuilder
         $connectionStringBuilder.psbase.ApplicationName = "Windows PowerShell ISE"

@@ -15,11 +15,11 @@ $server = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Server $server
 function Restore-Database
 {
     [CmdletBinding()]
-    Param(
+    param(
         [Parameter(ValueFromPipeline=$true)]
         [string]$backupfileName
     )
-    Process
+    process
     {
         $restore = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Restore
         $backupDeviceItem = New-Object -TypeName Microsoft.SQLServer.Management.Smo.BackupDeviceItem

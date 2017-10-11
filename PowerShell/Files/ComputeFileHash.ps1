@@ -7,11 +7,11 @@ Exit
 function Compute-FileHash
 {
     [CmdletBinding()]
-    Param(
+    param(
         [Parameter(ValueFromPipeline=$true)]
         $fileItem
     )
-    Process
+    process
     {
         $cryptoServiceProvider = New-Object -TypeName System.Security.Cryptography.SHA256CryptoServiceProvider
         $stream = [System.IO.File]::OpenRead($fileItem.FullName)
