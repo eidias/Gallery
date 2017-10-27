@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallery.Common", "Gallery.Common\Gallery.Common.csproj", "{8E4E9303-C6E3-4F46-8075-92C02B5C8ECF}"
 EndProject
@@ -86,6 +86,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Outlook", "Outlook", "{2FD67ED5-2FC4-4E32-AE75-633FAD539977}"
 	ProjectSection(SolutionItems) = preProject
 		VisualBasic\Outlook\FlagDuplicateEmails.bas = VisualBasic\Outlook\FlagDuplicateEmails.bas
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8E95A0F-000C-4ECE-8A5A-F9B8BFF5B5D0}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
 Global
