@@ -50,6 +50,7 @@
     <Compile Include="DataAccess\AppConfiguration.cs" />
     <Compile Include="DataAccess\AppContext.cs" />
     <Compile Include="DataAccess\AppInitializer.cs" />
+    <Compile Include="DataAccess\DatabaseConnection.cs" />
     <Compile Include="Domain\Entity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\EntityService.cs" />
