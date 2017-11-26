@@ -18,14 +18,14 @@ function FunctionWithBinding
     [CmdletBinding()]
     param(
         [Parameter(ValueFromPipeline=$true)]
-        $parameter1,
-		[Parameter()]
-        $parameter2
+        [string]$myValue,
+        [Parameter()]
+        [switch]$myOption
     )
     # Keywords should be written in lowercase
     process
     {
-	}
+        }
 }
 
 
