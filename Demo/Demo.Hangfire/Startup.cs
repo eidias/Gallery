@@ -15,8 +15,11 @@ namespace Demo.Hangfire
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //The difference is that GetService<T>() returns null if it can't find the service. GetRequiredService<T>() throws an InvalidOperationException if it can't find it.
 
             services.AddMvc();
+
+            services.AddHangfire();
 
         }
 
@@ -29,6 +32,8 @@ namespace Demo.Hangfire
             }
 
             app.UseHangfire(serviceProvider);
+
+            //Default values that would be applied when calling UseHangfireDashboard() without parameters.
             app.UseHangfireDashboard();
 
 

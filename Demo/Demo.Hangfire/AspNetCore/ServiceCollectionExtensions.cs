@@ -16,6 +16,8 @@ namespace Demo.Hangfire.AspNetCore
             //Use FT insert trigger for Hangfire Job
             //Make FileQueue Scheduler?
 
+            //A new empty database with the name supplied in the connection string must be created prior to the first start.
+            //By default Hangfire is using its own database schema so it does not interfere with others.
             services.AddHangfire(x => x.UseSqlServerStorage(SqlServerHelper.DefaultConnectionString));
 
 
