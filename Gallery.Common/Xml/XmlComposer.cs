@@ -12,7 +12,7 @@ namespace Gallery.Common.Xml
 {
     public class XmlComposer
     {
-        public static void SerializeWithEnumerator<TItem>(IEnumerable<TItem> items, XElement rootElement, Stream stream, Action<TItem> onSerializing = null)
+        public static void SerializeWithEnumerator<TItem>(XElement rootElement, IEnumerable<TItem> items, Stream stream, Action<TItem> onSerializing = null)
         {
             var xDocument = new XDocument();
             xDocument.Add(rootElement);
@@ -30,6 +30,7 @@ namespace Gallery.Common.Xml
                 {
                     onSerializing?.Invoke(enumerator.Current);
 
+                    //Prevents an exception as WriteStartDocument cannot be called on writers created with ConformanceLevel.Fragment
                     xmlWriter.WriteWhitespace(string.Empty);
                     xmlSerializer.Serialize(xmlWriter, enumerator.Current, xmlSerializerNamespaces);
                 }
