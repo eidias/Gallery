@@ -68,6 +68,7 @@
     <Compile Include="Web\CachedTraceListener.cs" />
     <Compile Include="Web\ErrorModule.cs" />
     <Compile Include="Web\ObjectContextModule.cs" />
+    <Compile Include="Xml\XmlComposer.cs" />
     <Compile Include="Xml\XmlLayout.cs" />
     <Compile Include="DirectoryServices\UserAccountControl.cs" />
     <Compile Include="DirectoryServices\ComputerPrincipalEx.cs" />
