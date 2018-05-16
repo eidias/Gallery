@@ -1,5 +1,15 @@
 # Templates
 ## Visual Studio Templates
+
+### Add a custom template
+1) Add substitution parameters according to https://docs.microsoft.com/en-us/visualstudio/ide/template-parameters
+2) Export the template in Visual Studio via "Project -> Export Template" without checking "Automatically import the template to Visual Studio" 
+3) Expand and modify the generate VS template
+4) Open the "Developer Command Prompt for VS2017" and run "devenv /updateconfiguration"
+
+### Remove a custom template
+Delete the expanded template folder from the ProjectTemplatesCache located at %APPDATA%\Microsoft\VisualStudio\<version_and_optional_ID>\ProjectTemplatesCache
+
 ### How to create Multi-Project Templates in Visual Studio
 
 Based on https://docs.microsoft.com/en-us/visualstudio/ide/how-to-create-multi-project-templates
