@@ -7,3 +7,8 @@
 # Clobbering allows importing modules having command names that already exists in other modules. The last loaded module wins.
 Install-Module AzureRM -AllowClobber
 
+# Show installed versions of AzureRM
+Get-Module AzureRM -ListAvailable
+
+# Uninstall a particular version of AzureRM
+Uninstall-Module AzureRM -RequiredVersion 6.5.0
