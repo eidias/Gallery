@@ -10,6 +10,23 @@ namespace Gallery.Library.Helpers
 {
     class MoqHelper
     {
+        internal static DbContext MockContextWithVerify<TEntity>(Expression<Func<DbContext, DbSet<TEntity>>> expression) where TEntity : class
+        {
+            //Generic placeholder for an entity
+            var entity = It.IsAny<TEntity>();
+
+            //Mock behavior loose
+            var mockedDbSet = new Mock<DbSet<TEntity>>();
+
+            var mockedDbContext = new Mock<DbContext>();
+            mockedDbContext.Setup(expression).Returns(mockedDbSet.Object);
+
+            mockedDbSet.Verify(x => x.Add(entity), Times.Once());
+            mockedDbContext.Verify(x => x.SaveChanges(), Times.Once());
+
+            return mockedDbContext.Object;
+        }
+
         internal static Mock<DbSet<T>> MockDbSet<T>(IQueryable<T> queryable) where T : class
         {
             Mock<DbSet<T>> mockDbSet = new Mock<DbSet<T>>();
