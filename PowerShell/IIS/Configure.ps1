@@ -42,7 +42,7 @@ function Add-WebApplication
     {
         $name = Split-Path $physicalPath -Leaf
         New-WebApplication -Name $name -Site $site -PhysicalPath $physicalPath -ApplicationPool $applicationPool
-        Set-ItemProperty -path IIS:\Sites\$site\$name -Name preloadEnabled -Value $true
+        Set-ItemProperty -Path IIS:\Sites\$site\$name -Name preloadEnabled -Value $true
     }
 }
 
